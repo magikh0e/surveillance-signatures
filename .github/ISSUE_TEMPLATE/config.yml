@@ -1,0 +1,20 @@
+# Blank issues stay on. The two forms cover signatures, and everything else
+# worth raising, a mistake in the prose or a problem with the extraction,
+# fits neither and should not have to be forced into one.
+blank_issues_enabled: true
+contact_links:
+  - name: A question about using the list
+    url: https://github.com/magikh0e/surveillance-signatures/discussions
+    about: >
+      How to read a table, what a grade means, how to consume this in your
+      own project. Discussions rather than an issue.
+  - name: How a grade is chosen
+    url: https://github.com/magikh0e/surveillance-signatures/blob/main/GRADING.md
+    about: >
+      Strong, Likely and Weak, what each should do in front of a user, and
+      the traps in matching these yourself.
+  - name: What to send, and what is out of scope
+    url: https://github.com/magikh0e/surveillance-signatures/blob/main/CONTRIBUTING.md
+    about: >
+      Worth two minutes first. The data files are generated, so signatures
+      go in as issues rather than pull requests.

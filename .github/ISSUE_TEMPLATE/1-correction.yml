@@ -1,0 +1,92 @@
+name: Correction to an existing row
+description: A row in the list is wrong, misattributed, or fires on things it should not
+title: "correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful kind of report. Almost none of the list has
+        been confirmed against the hardware it names, so a wrong row can sit
+        there for a long time putting a vendor's name on innocent hardware.
+
+  - type: input
+    id: row
+    attributes:
+      label: Which row
+      description: >
+        The value as it appears in the list, and the label next to it.
+      placeholder: "b4:1e:52, labelled Flock Safety"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: table
+    attributes:
+      label: Which table it is in
+      options:
+        - Not sure
+        - Fixed addresses
+        - WiFi address prefixes
+        - WiFi network names
+        - Names matched anywhere
+        - BLE company and service IDs
+        - BLE advertised names
+        - BLE 128-bit service UUIDs
+        - BLE manufacturer data
+        - BLE service data
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong with it
+      options:
+        - The vendor or label is wrong
+        - The kind is wrong
+        - The confidence is too high
+        - The confidence is too low
+        - It fires on unrelated hardware
+        - This is not surveillance hardware and should not be listed
+        - The value itself is wrong, a typo or a bad byte order
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: What it should be instead
+      description: >
+        If you know. "This is wrong and I do not know what is right" is a
+        perfectly good report.
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        A capture, a datasheet, an FCC filing, an IEEE registry entry, a
+        vendor support page, or a photograph of the hardware beside the scan
+        that found it. If you saw the row misfire, say on what and how you
+        know what that device actually was.
+
+
+        Another catalogue is a lead, not a source. If that is where this came
+        from, say so.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Before you post
+      options:
+        - label: >
+            I have redacted anything identifying from the evidence: my own
+            addresses, GPS coordinates, household network names, faces,
+            number plates.
+          required: true

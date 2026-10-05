@@ -1,0 +1,124 @@
+name: New signature
+description: Hardware that announces itself and is not in the list yet
+title: "signature: "
+labels: ["new signature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One signature per issue. Several unrelated vendors in one thread get
+        muddled and half of them get lost.
+
+        Not sure about a field? Say so and leave it. A report with evidence
+        and three blanks is worth more than a confident guess.
+
+  - type: input
+    id: value
+    attributes:
+      label: The signature
+      description: >
+        In whatever form you have it: an address prefix, a network or device
+        name, a service UUID, a company ID plus the bytes after it.
+      placeholder: "28:ea:5b, or Samsara, or 0xFEAA with first byte 0x40"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: table
+    attributes:
+      label: Where it is seen
+      options:
+        - Not sure
+        - A WiFi address prefix
+        - A WiFi network name, from the start
+        - A name with the vendor somewhere in the middle
+        - A BLE company ID or 16-bit service UUID
+        - A BLE advertised name
+        - A BLE 128-bit service UUID
+        - BLE manufacturer data, past the company ID
+        - BLE service data, past the service UUID
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of thing it is
+      options:
+        - Automatic number plate reader
+        - Body-worn camera
+        - Fixed camera
+        - Smart glasses
+        - Vehicle or fleet module
+        - Item tracker
+        - Accessory or wearable
+        - Pentest hardware
+        - Mesh radio node
+        - None of these
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: What it should be labelled
+      description: >
+        The text a user ends up reading. The vendor or the product, short,
+        no adjectives.
+      placeholder: "Samsara fleet"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Proposed confidence
+      description: >
+        See GRADING.md. Getting this wrong is not a problem; not having
+        thought about it is what makes a row hard to review.
+      options:
+        - Not sure
+        - "Strong: belongs to one vendor's product and is not plausibly anything else"
+        - "Likely: fits, and could belong to something unrelated"
+        - "Weak: corroboration only, a contract manufacturer or a shared identifier"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        A capture, a datasheet, an FCC filing, an IEEE registry entry, a
+        vendor support page naming the SSID or Bluetooth name, a photograph
+        of the hardware beside the scan that found it.
+
+
+        Another catalogue is a lead, not a source. If that is where this came
+        from, say so and say whether you checked it yourself.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Before you post
+      options:
+        - label: >
+            This identifies a product, not one device. I am not submitting
+            the address of a specific unit I saw, or of anybody's camera,
+            doorbell, car or phone.
+          required: true
+        - label: >
+            It is broadcast without being asked. Seeing it does not require
+            associating, pairing, authenticating or probing.
+          required: true
+        - label: >
+            I have redacted anything identifying from the evidence: my own
+            addresses, GPS coordinates, household network names, faces,
+            number plates.
+          required: true
+        - label: >
+            I am content for this to be published under GPL-3.0-or-later, and
+            it does not come from a source whose licence forbids that.
+          required: true
