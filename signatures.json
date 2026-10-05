@@ -1,0 +1,1884 @@
+{
+  "name": "surveillance-signatures",
+  "snapshot": "2026-10-04",
+  "licence": "GPL-3.0-or-later",
+  "extracted_from": "https://github.com/magikh0e/pueo",
+  "total": 266,
+  "kinds": {
+    "Alpr": "Automatic number plate reader",
+    "Bodycam": "Body-worn camera",
+    "Camera": "Fixed camera",
+    "Glasses": "Smart glasses",
+    "Vehicle": "Vehicle or fleet module",
+    "Tracker": "Item tracker",
+    "Accessory": "Accessory or wearable",
+    "Pentest": "Pentest hardware",
+    "Mesh": "Mesh radio node"
+  },
+  "tables": [
+    {
+      "name": "kMacSigs",
+      "title": "Fixed addresses",
+      "matches_on": "The whole six-byte address is the signature. WiFi only: every address this table can hold is locally administered, which is what makes it a made-up address.",
+      "columns": [
+        "Address",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Address": "de:ad:be:ef:de:ad",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "Pwnagotchi"
+        }
+      ]
+    },
+    {
+      "name": "kOuiSigs",
+      "title": "WiFi address prefixes",
+      "matches_on": "The first three bytes of a source address, which IEEE assigns to a manufacturer. Matched against BLE addresses too, but only where the entry is Strong and the advertised address is public.",
+      "columns": [
+        "OUI",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "OUI": "28:ea:5b",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Samsara fleet"
+        },
+        {
+          "OUI": "fc:db:21",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Samsara fleet"
+        },
+        {
+          "OUI": "98:5d:46",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "PeopleNet ELD"
+        },
+        {
+          "OUI": "00:17:1a",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Winegard RV"
+        },
+        {
+          "OUI": "cc:57:63",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "CarPlay dongle?"
+        },
+        {
+          "OUI": "68:8f:c9",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "CarPlay dongle?"
+        },
+        {
+          "OUI": "00:0e:a5",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "BLIP Systems"
+        },
+        {
+          "OUI": "00:14:7b",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Iteris (BlueTOAD)"
+        },
+        {
+          "OUI": "d4:11:d6",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "ShotSpotter"
+        },
+        {
+          "OUI": "14:ba:88",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Uniview"
+        },
+        {
+          "OUI": "48:ea:63",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Uniview"
+        },
+        {
+          "OUI": "6c:f1:7e",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Uniview"
+        },
+        {
+          "OUI": "88:26:3f",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Uniview"
+        },
+        {
+          "OUI": "c4:79:05",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Uniview"
+        },
+        {
+          "OUI": "00:23:bd",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Digital Ally"
+        },
+        {
+          "OUI": "00:30:44",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Cradlepoint"
+        },
+        {
+          "OUI": "00:e0:1c",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Cradlepoint"
+        },
+        {
+          "OUI": "00:14:3e",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "00:a0:d5",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "28:a3:31",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "50:13:9d",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "64:ce:6e",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "84:db:2f",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "cc:93:4a",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "OUI": "00:09:bc",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Utility Inc"
+        },
+        {
+          "OUI": "00:16:ed",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Utility Inc"
+        },
+        {
+          "OUI": "28:80:a2",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Inseego (MiFi?)"
+        },
+        {
+          "OUI": "00:40:29",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Compex (shared board?)"
+        },
+        {
+          "OUI": "00:80:48",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Compex (shared board?)"
+        },
+        {
+          "OUI": "04:f0:21",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Compex (shared board?)"
+        },
+        {
+          "OUI": "04:0d:84",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "1c:34:f1",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "38:5b:44",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "94:34:69",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "b4:e3:f9",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "f0:82:c0",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "FS battery?"
+        },
+        {
+          "OUI": "48:62:64",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Arlo"
+        },
+        {
+          "OUI": "a4:11:62",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Arlo"
+        },
+        {
+          "OUI": "fc:9c:98",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Arlo"
+        },
+        {
+          "OUI": "b4:1e:52",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Flock Safety"
+        },
+        {
+          "OUI": "00:03:7f",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Atheros QCA9377"
+        },
+        {
+          "OUI": "00:25:df",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Axon Enterprise"
+        },
+        {
+          "OUI": "00:f4:8d",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "14:5a:fc",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "14:b5:cd",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "24:b2:b9",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "3c:91:80",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "58:00:e3",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "5c:93:a2",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "64:6e:69",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "70:08:94",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "70:c9:4e",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "74:4c:a1",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "80:30:49",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "94:08:53",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "9c:2f:9d",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "b8:1e:a4",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "c0:35:32",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "d0:39:57",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "d8:f3:bc",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "e0:0a:f6",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "e4:aa:ea",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "e8:d0:fc",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "f4:6a:dd",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "f8:a2:d6",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Liteon (ALPR?)"
+        },
+        {
+          "OUI": "58:8e:81",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "SiLabs (ALPR?)"
+        },
+        {
+          "OUI": "90:35:ea",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "SiLabs (ALPR?)"
+        },
+        {
+          "OUI": "ec:1b:bd",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "SiLabs (ALPR?)"
+        },
+        {
+          "OUI": "3c:71:bf",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Espressif (ALPR?)"
+        },
+        {
+          "OUI": "a4:cf:12",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Espressif (ALPR?)"
+        },
+        {
+          "OUI": "08:3a:88",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "USI (ALPR?)"
+        },
+        {
+          "OUI": "e0:4f:43",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "USI (ALPR?)"
+        },
+        {
+          "OUI": "48:27:ea",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Samsung (ALPR?)"
+        },
+        {
+          "OUI": "82:6b:f2",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": ""
+        },
+        {
+          "OUI": "00:04:7d",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Motorola Solutions"
+        },
+        {
+          "OUI": "00:18:85",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Motorola Solutions"
+        },
+        {
+          "OUI": "00:1f:92",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Motorola Solutions"
+        },
+        {
+          "OUI": "4c:cc:34",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Motorola Solutions"
+        },
+        {
+          "OUI": "b8:e2:8c",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Motorola Malaysia"
+        },
+        {
+          "OUI": "00:bf:15",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Genetec"
+        },
+        {
+          "OUI": "0c:bf:15",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Genetec"
+        },
+        {
+          "OUI": "ac:9f:c3",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "18:7f:88",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "34:3e:a4",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "54:e0:19",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "5c:47:5e",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "64:9a:63",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "90:48:6c",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "9c:76:13",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "cc:3b:fb",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "c4:db:ad",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "24:2b:d6",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "00:b4:63",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "50:e4:67",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Ring"
+        },
+        {
+          "OUI": "c0:56:e3",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Hikvision"
+        },
+        {
+          "OUI": "44:19:b6",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Hikvision"
+        },
+        {
+          "OUI": "28:57:be",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Hikvision"
+        },
+        {
+          "OUI": "2c:aa:8e",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Wyze Labs"
+        },
+        {
+          "OUI": "d0:3f:27",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Wyze Labs"
+        },
+        {
+          "OUI": "7c:78:b2",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Wyze Labs"
+        },
+        {
+          "OUI": "00:40:8c",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Axis Comms"
+        },
+        {
+          "OUI": "b8:a4:4f",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Axis Comms"
+        },
+        {
+          "OUI": "e0:a7:00",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Verkada"
+        },
+        {
+          "OUI": "70:1a:d5",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Avigilon Alta"
+        },
+        {
+          "OUI": "34:d2:70",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Amazon (Ring parent)"
+        },
+        {
+          "OUI": "f0:27:2d",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Amazon (Ring parent)"
+        },
+        {
+          "OUI": "fc:65:de",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Amazon (Ring parent)"
+        },
+        {
+          "OUI": "68:37:e9",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Amazon (Ring parent)"
+        },
+        {
+          "OUI": "b8:d7:af",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Murata (module)"
+        },
+        {
+          "OUI": "00:e0:4c",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Realtek (module)"
+        },
+        {
+          "OUI": "a4:c1:38",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Telink (module)"
+        },
+        {
+          "OUI": "4c:69:05",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "unregistered OUI"
+        },
+        {
+          "OUI": "0c:fa:22",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "Flipper Devices"
+        },
+        {
+          "OUI": "02:c0:ca",
+          "Kind": "Pentest",
+          "Conf": "Weak",
+          "Label": "Hak5 LAA default"
+        },
+        {
+          "OUI": "02:13:37",
+          "Kind": "Pentest",
+          "Conf": "Weak",
+          "Label": "Hak5 LAA default"
+        },
+        {
+          "OUI": "00:c0:ca",
+          "Kind": "Pentest",
+          "Conf": "Weak",
+          "Label": "ALFA (Pineapple radio?)"
+        },
+        {
+          "OUI": "de:ad:be",
+          "Kind": "Pentest",
+          "Conf": "Weak",
+          "Label": "deadbeef MAC"
+        },
+        {
+          "OUI": "b8:35:32",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "unregistered OUI"
+        }
+      ]
+    },
+    {
+      "name": "kSsidSigs",
+      "title": "WiFi network names",
+      "matches_on": "Matched case-insensitively from the start of an SSID in a probe request or a beacon. A length, where given, means the name must be exactly that long.",
+      "columns": [
+        "Prefix",
+        "Len",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Prefix": "Flock Camera net",
+          "Len": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Flock camera SSID"
+        },
+        {
+          "Prefix": "Flock-",
+          "Len": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Flock SSID"
+        },
+        {
+          "Prefix": "Flock",
+          "Len": "",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Flock (bare)"
+        },
+        {
+          "Prefix": "Penguin-",
+          "Len": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "Flock battery pack"
+        },
+        {
+          "Prefix": "O.MG",
+          "Len": "",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "O.MG cable (default SSID)"
+        }
+      ]
+    },
+    {
+      "name": "kNameInSigs",
+      "title": "Names matched anywhere",
+      "matches_on": "Found anywhere in a name rather than at the start, because people rename the front of these. A length, where given, is a minimum the name must reach.",
+      "columns": [
+        "Needle",
+        "Min",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Needle": "Samsara",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Samsara fleet"
+        },
+        {
+          "Needle": "KeepTruckin",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Motive ELD"
+        },
+        {
+          "Needle": "Motive Hotspot",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Motive ELD"
+        },
+        {
+          "Needle": "Motive_",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Motive ELD"
+        },
+        {
+          "Needle": "PNet",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "PeopleNet ELD"
+        },
+        {
+          "Needle": "tsTPMS",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Tesla tyre sensor"
+        },
+        {
+          "Needle": "TireCheck",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "TireCheck TPMS"
+        },
+        {
+          "Needle": "TPMS",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "TPMS sensor"
+        },
+        {
+          "Needle": "FOBO",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "FOBO TPMS"
+        },
+        {
+          "Needle": "TeslaWallConnector",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla charger"
+        },
+        {
+          "Needle": "Cybertruck",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla"
+        },
+        {
+          "Needle": "TeslaGW",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla"
+        },
+        {
+          "Needle": "myChevrolet",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Chevrolet"
+        },
+        {
+          "Needle": "myCadillac",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Cadillac"
+        },
+        {
+          "Needle": "myBuick",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Buick"
+        },
+        {
+          "Needle": "myGMC",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "GMC"
+        },
+        {
+          "Needle": "Uconnect",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Stellantis Uconnect"
+        },
+        {
+          "Needle": "Porsche_WLAN",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Porsche"
+        },
+        {
+          "Needle": "Audi_MMI_",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Audi MMI"
+        },
+        {
+          "Needle": "MBUX",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Mercedes MBUX"
+        },
+        {
+          "Needle": "CARLINK-",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "CarPlay adapter"
+        },
+        {
+          "Needle": "CarPlay",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "CarPlay head unit"
+        },
+        {
+          "Needle": "Winegard",
+          "Min": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Winegard RV"
+        },
+        {
+          "Needle": "BlipTrack",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "BlipTrack"
+        },
+        {
+          "Needle": "BLIP-Track",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "BlipTrack"
+        },
+        {
+          "Needle": "BlueTOAD",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "BlueTOAD"
+        },
+        {
+          "Needle": "BlueARGUS",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Iteris BlueARGUS"
+        },
+        {
+          "Needle": "VantageARGUS",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Iteris VantageARGUS"
+        },
+        {
+          "Needle": "VantageVelocity",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Iteris Vantage"
+        },
+        {
+          "Needle": "Vantage Velocity",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Iteris Vantage"
+        },
+        {
+          "Needle": "TrafficCast",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "TrafficCast"
+        },
+        {
+          "Needle": "Miovision",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Miovision"
+        },
+        {
+          "Needle": "Pigvision",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Pigvision"
+        },
+        {
+          "Needle": "ShotSpotter",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "ShotSpotter"
+        },
+        {
+          "Needle": "Shot Spotter",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "ShotSpotter"
+        },
+        {
+          "Needle": "SoundThinking",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "SoundThinking"
+        },
+        {
+          "Needle": "LVT-",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "LVT trailer"
+        },
+        {
+          "Needle": "LVT_",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "LVT trailer"
+        },
+        {
+          "Needle": "LiveView",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "LVT trailer?"
+        },
+        {
+          "Needle": "Dahua",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Dahua"
+        },
+        {
+          "Needle": "Uniview",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Uniview"
+        },
+        {
+          "Needle": "Uniarch",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Uniview Uniarch"
+        },
+        {
+          "Needle": "UNV-",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Uniview"
+        },
+        {
+          "Needle": "UVC G3 Instant",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "UniFi Protect"
+        },
+        {
+          "Needle": "UVC G4 Instant",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "UniFi Protect"
+        },
+        {
+          "Needle": "UVC G6 Instant",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "UniFi Protect"
+        },
+        {
+          "Needle": "FS Ext",
+          "Min": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "FS pole battery"
+        },
+        {
+          "Needle": "PENGUIN",
+          "Min": "",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Penguin battery?"
+        },
+        {
+          "Needle": "Digital Ally",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Digital Ally"
+        },
+        {
+          "Needle": "DigitalAlly",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Digital Ally"
+        },
+        {
+          "Needle": "FirstVu",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Digital Ally FirstVu"
+        },
+        {
+          "Needle": "VuLink",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Digital Ally VuLink"
+        },
+        {
+          "Needle": "EVO-HD",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Likely",
+          "Label": "Digital Ally EVO-HD"
+        },
+        {
+          "Needle": "Cradlepoint",
+          "Min": "",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Cradlepoint"
+        },
+        {
+          "Needle": "AirLink",
+          "Min": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "Sierra AirLink"
+        },
+        {
+          "Needle": "ARLO_VMB_",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Strong",
+          "Label": "Arlo base station"
+        },
+        {
+          "Needle": "Arlo",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "Arlo?"
+        },
+        {
+          "Needle": "EufyCam",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "eufy"
+        },
+        {
+          "Needle": "Nest Cam",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Nest Cam"
+        },
+        {
+          "Needle": "Nestcam",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Nest Cam"
+        },
+        {
+          "Needle": "Nest-Hello",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Nest doorbell"
+        },
+        {
+          "Needle": "Reolink",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Reolink"
+        },
+        {
+          "Needle": "Tapo",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Weak",
+          "Label": "TP-Link Tapo?"
+        },
+        {
+          "Needle": "Pineapple_",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "Hak5 Pineapple"
+        },
+        {
+          "Needle": "WiFi Pineapple",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "Hak5 Pineapple"
+        },
+        {
+          "Needle": "MarauderAP",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "ESP32 Marauder"
+        },
+        {
+          "Needle": "Marauder",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "ESP32 Marauder"
+        },
+        {
+          "Needle": "GhostESP",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Strong",
+          "Label": "GhostESP"
+        },
+        {
+          "Needle": "Deauther",
+          "Min": "",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "ESP8266 Deauther"
+        },
+        {
+          "Needle": "Rekor",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Rekor (ALPR)"
+        },
+        {
+          "Needle": "Hayden",
+          "Min": "",
+          "Kind": "Alpr",
+          "Conf": "Likely",
+          "Label": "Hayden AI (ALPR)"
+        },
+        {
+          "Needle": "Avigilon",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Avigilon"
+        },
+        {
+          "Needle": "Wisenet",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Hanwha Wisenet"
+        },
+        {
+          "Needle": "Rhombus",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Rhombus"
+        },
+        {
+          "Needle": "i-PRO",
+          "Min": "",
+          "Kind": "Camera",
+          "Conf": "Likely",
+          "Label": "Panasonic i-PRO"
+        },
+        {
+          "Needle": "Wolfcom",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Likely",
+          "Label": "Wolfcom"
+        },
+        {
+          "Needle": "WatchGuard",
+          "Min": "",
+          "Kind": "Bodycam",
+          "Conf": "Likely",
+          "Label": "WatchGuard Video"
+        },
+        {
+          "Needle": "Reveal",
+          "Min": "8",
+          "Kind": "Bodycam",
+          "Conf": "Weak",
+          "Label": "Reveal Media?"
+        }
+      ]
+    },
+    {
+      "name": "kBleSigs",
+      "title": "BLE company and service IDs",
+      "matches_on": "A 16-bit manufacturer company ID, a 16-bit service UUID, or both. A blank means the field is not part of the rule.",
+      "columns": [
+        "Company",
+        "Service",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Company": "0x0B6B",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Samsara fleet"
+        },
+        {
+          "Company": "0x0601",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Schrader TPMS"
+        },
+        {
+          "Company": "0x0B99",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Goodyear tyre"
+        },
+        {
+          "Company": "0x0E32",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Pacific TPMS"
+        },
+        {
+          "Company": "0x070A",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Huf tyre/PEPS"
+        },
+        {
+          "Company": "0x0127",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "FOBO TPMS"
+        },
+        {
+          "Company": "0x0BA2",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "TireCheck TPMS"
+        },
+        {
+          "Company": "",
+          "Service": "0x00EE",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "FOBO TPMS"
+        },
+        {
+          "Company": "",
+          "Service": "0x27A5",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "SYTPMS sensor"
+        },
+        {
+          "Company": "",
+          "Service": "0xFBB0",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "Aftermarket TPMS"
+        },
+        {
+          "Company": "",
+          "Service": "0x1860",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "TPMS service"
+        },
+        {
+          "Company": "0x022B",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla"
+        },
+        {
+          "Company": "",
+          "Service": "0xFE96",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla"
+        },
+        {
+          "Company": "",
+          "Service": "0xFE97",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Tesla"
+        },
+        {
+          "Company": "0x05EB",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "BMW"
+        },
+        {
+          "Company": "0x0723",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Ford/Lincoln"
+        },
+        {
+          "Company": "0x0977",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Toyota/Lexus"
+        },
+        {
+          "Company": "0x0915",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Honda/Acura"
+        },
+        {
+          "Company": "0x0826",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Hyundai/Genesis"
+        },
+        {
+          "Company": "0x0BA6",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Nissan/Infiniti"
+        },
+        {
+          "Company": "0x0A10",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Subaru"
+        },
+        {
+          "Company": "0x011F",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Volkswagen"
+        },
+        {
+          "Company": "",
+          "Service": "0xFE30",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Volkswagen"
+        },
+        {
+          "Company": "",
+          "Service": "0xFE31",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Volkswagen"
+        },
+        {
+          "Company": "0x010E",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Audi"
+        },
+        {
+          "Company": "0x0120",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Porsche"
+        },
+        {
+          "Company": "0x017C",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Mercedes"
+        },
+        {
+          "Company": "0x020B",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Jaguar/Land Rover"
+        },
+        {
+          "Company": "0x0068",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "GM"
+        },
+        {
+          "Company": "0x0941",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "Rivian"
+        },
+        {
+          "Company": "0x0C34",
+          "Service": "",
+          "Kind": "Vehicle",
+          "Conf": "Weak",
+          "Label": "BYD"
+        },
+        {
+          "Company": "0x09C8",
+          "Service": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "Penguin battery"
+        },
+        {
+          "Company": "0x0D53",
+          "Service": "0xFD5F",
+          "Kind": "Glasses",
+          "Conf": "Strong",
+          "Label": "Meta Ray-Ban"
+        },
+        {
+          "Company": "0x0D53",
+          "Service": "",
+          "Kind": "Glasses",
+          "Conf": "Likely",
+          "Label": "Luxottica eyewear"
+        },
+        {
+          "Company": "",
+          "Service": "0xFD5F",
+          "Kind": "Glasses",
+          "Conf": "Likely",
+          "Label": "Meta device"
+        },
+        {
+          "Company": "0x09C8",
+          "Service": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "XUNTONG (Penguin)"
+        },
+        {
+          "Company": "",
+          "Service": "0xFEED",
+          "Kind": "Tracker",
+          "Conf": "Strong",
+          "Label": "Tile"
+        },
+        {
+          "Company": "",
+          "Service": "0xFEEC",
+          "Kind": "Tracker",
+          "Conf": "Strong",
+          "Label": "Tile"
+        },
+        {
+          "Company": "",
+          "Service": "0xFD5A",
+          "Kind": "Tracker",
+          "Conf": "Likely",
+          "Label": "Samsung (SmartTag?)"
+        },
+        {
+          "Company": "",
+          "Service": "0xFEAA",
+          "Kind": "Tracker",
+          "Conf": "Weak",
+          "Label": "Eddystone beacon"
+        },
+        {
+          "Company": "",
+          "Service": "0x3080",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "Flipper Zero"
+        },
+        {
+          "Company": "",
+          "Service": "0x3081",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "Flipper Zero (black)"
+        },
+        {
+          "Company": "",
+          "Service": "0x3082",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "Flipper Zero (white)"
+        },
+        {
+          "Company": "",
+          "Service": "0x3083",
+          "Kind": "Pentest",
+          "Conf": "Likely",
+          "Label": "Flipper Zero (clear)"
+        },
+        {
+          "Company": "",
+          "Service": "0x3100",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Raven GATT 3100"
+        },
+        {
+          "Company": "",
+          "Service": "0x3101",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Raven GATT 3101"
+        },
+        {
+          "Company": "",
+          "Service": "0x3102",
+          "Kind": "Alpr",
+          "Conf": "Weak",
+          "Label": "Raven GATT 3102"
+        }
+      ]
+    },
+    {
+      "name": "kBleNameSigs",
+      "title": "BLE advertised names",
+      "matches_on": "Matched case-insensitively from the start of an advertised name.",
+      "columns": [
+        "Prefix",
+        "Len",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Prefix": "Penguin-",
+          "Len": "",
+          "Kind": "Accessory",
+          "Conf": "Likely",
+          "Label": "Flock battery pack"
+        },
+        {
+          "Prefix": "FS Ext Battery",
+          "Len": "",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Flock ext battery"
+        },
+        {
+          "Prefix": "Ray-Ban",
+          "Len": "",
+          "Kind": "Glasses",
+          "Conf": "Strong",
+          "Label": "Ray-Ban Meta"
+        },
+        {
+          "Prefix": "Spectacles",
+          "Len": "",
+          "Kind": "Glasses",
+          "Conf": "Strong",
+          "Label": "Snap Spectacles"
+        },
+        {
+          "Prefix": "DfuTarg",
+          "Len": "",
+          "Kind": "Accessory",
+          "Conf": "Weak",
+          "Label": "Nordic DFU (generic)"
+        },
+        {
+          "Prefix": "QT ",
+          "Len": "11",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "KARR BT module"
+        },
+        {
+          "Prefix": "DR ",
+          "Len": "11",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "KARR Cell module"
+        }
+      ]
+    },
+    {
+      "name": "kBle128Sigs",
+      "title": "BLE 128-bit service UUIDs",
+      "matches_on": "A service UUID somebody generated for their own protocol rather than an allocation out of the shared 16-bit space, which is why a hit here is worth more. Printed in the usual order, not the little-endian order they are stored in.",
+      "columns": [
+        "UUID",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "UUID": "6ba1b218-15a8-461f-9fa8-5dcae273eafd",
+          "Kind": "Mesh",
+          "Conf": "Strong",
+          "Label": "Meshtastic node"
+        },
+        {
+          "UUID": "e8ccbb38-9532-46a8-9fe5-1814df172e6f",
+          "Kind": "Accessory",
+          "Conf": "Strong",
+          "Label": "Flock accessory"
+        }
+      ]
+    },
+    {
+      "name": "kMfgSigs",
+      "title": "BLE manufacturer data",
+      "matches_on": "A company ID plus the first bytes that follow it. Company 0x004C is every Apple device in range; the type byte after it is what makes one of them a Find My accessory.",
+      "columns": [
+        "Company",
+        "Prefix",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Company": "0x0001",
+          "Prefix": "80",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "TPMS (front L)"
+        },
+        {
+          "Company": "0x0001",
+          "Prefix": "81",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "TPMS (front R)"
+        },
+        {
+          "Company": "0x0001",
+          "Prefix": "82",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "TPMS (rear L)"
+        },
+        {
+          "Company": "0x0001",
+          "Prefix": "83",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "TPMS (rear R)"
+        },
+        {
+          "Company": "0x004C",
+          "Prefix": "12",
+          "Kind": "Tracker",
+          "Conf": "Likely",
+          "Label": "Apple Find My (separated)"
+        }
+      ]
+    },
+    {
+      "name": "kSvcDataSigs",
+      "title": "BLE service data",
+      "matches_on": "A service UUID plus the first bytes of the data it carries. A Find My Device tag and a shop's beacon both advertise 0xFEAA; the frame type says which.",
+      "columns": [
+        "Service",
+        "Prefix",
+        "Kind",
+        "Conf",
+        "Label"
+      ],
+      "rows": [
+        {
+          "Service": "0xFEAA",
+          "Prefix": "40",
+          "Kind": "Tracker",
+          "Conf": "Strong",
+          "Label": "Google Find My Device"
+        },
+        {
+          "Service": "0xFEAA",
+          "Prefix": "41",
+          "Kind": "Tracker",
+          "Conf": "Strong",
+          "Label": "Google Find My Device"
+        },
+        {
+          "Service": "0xFCB2",
+          "Prefix": "",
+          "Kind": "Tracker",
+          "Conf": "Strong",
+          "Label": "DULT tracker"
+        }
+      ]
+    }
+  ]
+}
