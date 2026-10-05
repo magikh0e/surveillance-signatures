@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="assets/logo-512.png" width="160" height="160"
+       alt="A fingerprint whose ridges are broken into short dashes, the
+            outer two trailing off to the right like a radio emission.">
+</p>
+
 # Surveillance signatures
 
 Identifiers that surveillance hardware broadcasts: **266 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
@@ -12,6 +18,7 @@ Snapshot of 2026-10-04. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magik
 | `GRADING.md` | what the confidence levels mean, how to use them, how to contribute a row |
 | `signatures.csv` | one row per signature, flat |
 | `signatures.json` | the same, grouped by table |
+| `assets/` | the mark, flat on its ground and again transparent |
 
 ## What a match means, and what it does not
 
