@@ -9,6 +9,7 @@ Snapshot of 2026-10-04. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magik
 | File | What it is |
 | --- | --- |
 | `README.md` | this, the whole list |
+| `GRADING.md` | what the confidence levels mean, how to use them, how to contribute a row |
 | `signatures.csv` | one row per signature, flat |
 | `signatures.json` | the same, grouped by table |
 
@@ -26,7 +27,7 @@ An address prefix identifies whoever bought the block, which is often a contract
 
 Two differently labelled signatures on the same address promote Likely to Strong. They do not promote Weak, because two hints agreeing are still two hints.
 
-A suggested rule for anything consuming this: match address prefixes against BLE only where the entry is Strong and the advertised address is public. A BLE scan hears every advertiser in the room rather than only the ones probing for a network, so a contract manufacturer's block loose on BLE will report a shelf of unrelated devices as surveillance hardware.
+That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corroboration rule, what each level should do in front of a user, the traps in consuming this list, and how to pick a grade for a row you want to contribute.
 
 ## Kinds
 
@@ -379,7 +380,7 @@ What was taken is which vendors are worth naming and what they put in a name. Th
 
 ## Corrections
 
-A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry.
+A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry. [GRADING.md](GRADING.md#contributing-a-signature) says what to include and what tends to get turned down.
 
 ## Licence
 
