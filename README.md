@@ -380,12 +380,6 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `0xFEAA` | 41 | Tracker | Strong | Google Find My Device |
 | `0xFCB2` |  | Tracker | Strong | DULT tracker |
 
-## Sources
-
-The surveillance, law-enforcement and camera entries were found by comparing against the signature catalog in [OffGridPete/Fieldwatch](https://github.com/OffGridPete/Fieldwatch), which is MIT licensed. MIT into GPL-3.0-or-later works; the reverse does not, so nothing here goes back the other way.
-
-What was taken is which vendors are worth naming and what they put in a name. The grading here is not theirs, and neither is the decision about what belongs on this list at all: Fieldwatch files handheld action cameras under CAMERA and they are not here, because a GoPro is a camera and is not surveillance.
-
 ## Corrections
 
 A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry.
