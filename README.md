@@ -15,7 +15,8 @@ Snapshot of 2026-10-04. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magik
 | File | What it is |
 | --- | --- |
 | `README.md` | this, the whole list |
-| `GRADING.md` | what the confidence levels mean, how to use them, how to contribute a row |
+| `GRADING.md` | what the confidence levels mean and how to use them |
+| `CONTRIBUTING.md` | what to send, what evidence settles it, what is out of scope |
 | `signatures.csv` | one row per signature, flat |
 | `signatures.json` | the same, grouped by table |
 | `assets/` | the mark, flat on its ground and again transparent |
@@ -387,7 +388,9 @@ What was taken is which vendors are worth naming and what they put in a name. Th
 
 ## Corrections
 
-A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry. [GRADING.md](GRADING.md#contributing-a-signature) says what to include and what tends to get turned down.
+A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry.
+
+**[CONTRIBUTING.md](CONTRIBUTING.md)** has the rest, and one thing worth knowing before you start: the three data files are generated, so a pull request editing them is overwritten by the next regeneration. Signatures go in as issues. Everything that is not generated takes a pull request as normal.
 
 ## Licence
 
