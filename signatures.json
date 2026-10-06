@@ -1,9 +1,9 @@
 {
   "name": "surveillance-signatures",
-  "snapshot": "2026-10-04",
+  "snapshot": "2026-10-06",
   "licence": "GPL-3.0-or-later",
   "extracted_from": "https://github.com/magikh0e/pueo",
-  "total": 266,
+  "total": 274,
   "kinds": {
     "Alpr": "Automatic number plate reader",
     "Bodycam": "Body-worn camera",
@@ -753,6 +753,54 @@
           "Kind": "Alpr",
           "Conf": "Weak",
           "Label": "unregistered OUI"
+        },
+        {
+          "OUI": "00:17:88",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Philips Hue (Zigbee)"
+        },
+        {
+          "OUI": "ec:b5:fa",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Philips Hue (Zigbee)"
+        },
+        {
+          "OUI": "c4:29:96",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Signify Hue (Zigbee)"
+        },
+        {
+          "OUI": "fc:26:8c",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Signify Hue (Zigbee)"
+        },
+        {
+          "OUI": "24:fd:5b",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "SmartThings hub"
+        },
+        {
+          "OUI": "18:c2:3c",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Aqara/Lumi gateway"
+        },
+        {
+          "OUI": "54:ef:44",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "Aqara/Lumi gateway"
+        },
+        {
+          "OUI": "68:ec:8a",
+          "Kind": "Mesh",
+          "Conf": "Likely",
+          "Label": "IKEA smart home hub"
         }
       ]
     },

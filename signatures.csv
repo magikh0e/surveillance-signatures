@@ -118,6 +118,14 @@ kOuiSigs,OUI,02:13:37,,Pentest,Weak,Hak5 LAA default
 kOuiSigs,OUI,00:c0:ca,,Pentest,Weak,ALFA (Pineapple radio?)
 kOuiSigs,OUI,de:ad:be,,Pentest,Weak,deadbeef MAC
 kOuiSigs,OUI,b8:35:32,,Alpr,Weak,unregistered OUI
+kOuiSigs,OUI,00:17:88,,Mesh,Likely,Philips Hue (Zigbee)
+kOuiSigs,OUI,ec:b5:fa,,Mesh,Likely,Philips Hue (Zigbee)
+kOuiSigs,OUI,c4:29:96,,Mesh,Likely,Signify Hue (Zigbee)
+kOuiSigs,OUI,fc:26:8c,,Mesh,Likely,Signify Hue (Zigbee)
+kOuiSigs,OUI,24:fd:5b,,Mesh,Likely,SmartThings hub
+kOuiSigs,OUI,18:c2:3c,,Mesh,Likely,Aqara/Lumi gateway
+kOuiSigs,OUI,54:ef:44,,Mesh,Likely,Aqara/Lumi gateway
+kOuiSigs,OUI,68:ec:8a,,Mesh,Likely,IKEA smart home hub
 kSsidSigs,Prefix,Flock Camera net,,Alpr,Strong,Flock camera SSID
 kSsidSigs,Prefix,Flock-,,Alpr,Strong,Flock SSID
 kSsidSigs,Prefix,Flock,,Alpr,Likely,Flock (bare)

@@ -6,11 +6,11 @@
 
 # Surveillance signatures
 
-Identifiers that surveillance hardware broadcasts: **266 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
+Identifiers that surveillance hardware broadcasts: **274 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
 
 Everything here is a thing a device announces to anyone in range, over WiFi or Bluetooth Low Energy, without being asked. Nothing in this list requires connecting to anything, and nothing in it describes an attack.
 
-Snapshot of 2026-10-04. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magikh0e/pueo](https://github.com/magikh0e/pueo), which is GPL-3.0-or-later, so this carries the same licence.
+Snapshot of 2026-10-06. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magikh0e/pueo](https://github.com/magikh0e/pueo), which is GPL-3.0-or-later, so this carries the same licence.
 
 | File | What it is |
 | --- | --- |
@@ -49,7 +49,7 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `Tracker` | Item tracker | 8 |
 | `Accessory` | Accessory or wearable | 32 |
 | `Pentest` | Pentest hardware | 17 |
-| `Mesh` | Mesh radio node | 1 |
+| `Mesh` | Mesh radio node | 9 |
 
 ## Fixed addresses
 
@@ -61,7 +61,7 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 
 ## WiFi address prefixes
 
-`kOuiSigs`, 118 rows. The first three bytes of a source address, which IEEE assigns to a manufacturer. Matched against BLE addresses too, but only where the entry is Strong and the advertised address is public.
+`kOuiSigs`, 126 rows. The first three bytes of a source address, which IEEE assigns to a manufacturer. Matched against BLE addresses too, but only where the entry is Strong and the advertised address is public.
 
 | OUI | Kind | Conf | Label |
 | --- | --- | --- | --- |
@@ -183,6 +183,14 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `00:c0:ca` | Pentest | Weak | ALFA (Pineapple radio?) |
 | `de:ad:be` | Pentest | Weak | deadbeef MAC |
 | `b8:35:32` | Alpr | Weak | unregistered OUI |
+| `00:17:88` | Mesh | Likely | Philips Hue (Zigbee) |
+| `ec:b5:fa` | Mesh | Likely | Philips Hue (Zigbee) |
+| `c4:29:96` | Mesh | Likely | Signify Hue (Zigbee) |
+| `fc:26:8c` | Mesh | Likely | Signify Hue (Zigbee) |
+| `24:fd:5b` | Mesh | Likely | SmartThings hub |
+| `18:c2:3c` | Mesh | Likely | Aqara/Lumi gateway |
+| `54:ef:44` | Mesh | Likely | Aqara/Lumi gateway |
+| `68:ec:8a` | Mesh | Likely | IKEA smart home hub |
 
 ## WiFi network names
 
