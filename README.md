@@ -10,6 +10,10 @@ Identifiers that surveillance hardware broadcasts: **274 rows over nine tables**
 
 Everything here is a thing a device announces to anyone in range, over WiFi or Bluetooth Low Energy, without being asked. Nothing in this list requires connecting to anything, and nothing in it describes an attack.
 
+**Not all of it is surveillance.** The `Mesh` rows are mesh radio nodes: a Meshtastic node, and the hubs that run a Zigbee network. They are here because knowing one is in range is worth something on its own, and because that is a different claim from a camera, which is why they carry their own kind rather than being filed as something they are not.
+
+The Zigbee rows name the hub rather than the protocol, and the distinction matters: 802.15.4 is not readable by the hardware this list was built for. Each of those hubs also carries WiFi or BLE and announces itself there, so the network is findable by the thing running it even though its traffic is not.
+
 Snapshot of 2026-10-06. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magikh0e/pueo](https://github.com/magikh0e/pueo), which is GPL-3.0-or-later, so this carries the same licence.
 
 | File | What it is |
