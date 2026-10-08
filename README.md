@@ -6,7 +6,7 @@
 
 # Surveillance signatures
 
-Identifiers that surveillance hardware broadcasts: **274 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
+Identifiers that surveillance hardware broadcasts: **283 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
 
 Everything here is a thing a device announces to anyone in range, over WiFi or Bluetooth Low Energy, without being asked. Nothing in this list requires connecting to anything, and nothing in it describes an attack.
 
@@ -14,7 +14,7 @@ Everything here is a thing a device announces to anyone in range, over WiFi or B
 
 The Zigbee rows name the hub rather than the protocol, and the distinction matters: 802.15.4 is not readable by the hardware this list was built for. Each of those hubs also carries WiFi or BLE and announces itself there, so the network is findable by the thing running it even though its traffic is not.
 
-Snapshot of 2026-10-06. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magikh0e/pueo](https://github.com/magikh0e/pueo), which is GPL-3.0-or-later, so this carries the same licence.
+Snapshot of 2026-10-07. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magikh0e/pueo](https://github.com/magikh0e/pueo), which is GPL-3.0-or-later, so this carries the same licence.
 
 | File | What it is |
 | --- | --- |
@@ -45,15 +45,16 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 
 | Kind | Meaning | Rows |
 | --- | --- | --- |
-| `Alpr` | Automatic number plate reader | 68 |
-| `Bodycam` | Body-worn camera | 10 |
+| `Alpr` | Automatic number plate reader | 64 |
+| `Bodycam` | Body-worn camera | 17 |
 | `Camera` | Fixed camera | 59 |
 | `Glasses` | Smart glasses | 5 |
-| `Vehicle` | Vehicle or fleet module | 66 |
+| `Vehicle` | Vehicle or fleet module | 73 |
 | `Tracker` | Item tracker | 8 |
-| `Accessory` | Accessory or wearable | 32 |
+| `Accessory` | Accessory or wearable | 24 |
 | `Pentest` | Pentest hardware | 17 |
 | `Mesh` | Mesh radio node | 9 |
+| `Acoustic` | Gunshot detection sensor | 7 |
 
 ## Fixed addresses
 
@@ -76,14 +77,25 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `cc:57:63` | Vehicle | Weak | CarPlay dongle? |
 | `68:8f:c9` | Vehicle | Weak | CarPlay dongle? |
 | `00:0e:a5` | Alpr | Strong | BLIP Systems |
+| `00:18:29` | Alpr | Strong | Gatsometer |
+| `00:30:7e` | Alpr | Strong | Redflex |
 | `00:14:7b` | Alpr | Strong | Iteris (BlueTOAD) |
-| `d4:11:d6` | Alpr | Strong | ShotSpotter |
+| `d4:11:d6` | Acoustic | Strong | ShotSpotter |
 | `14:ba:88` | Camera | Strong | Uniview |
 | `48:ea:63` | Camera | Strong | Uniview |
 | `6c:f1:7e` | Camera | Strong | Uniview |
 | `88:26:3f` | Camera | Strong | Uniview |
 | `c4:79:05` | Camera | Strong | Uniview |
 | `00:23:bd` | Bodycam | Strong | Digital Ally |
+| `00:09:bc` | Bodycam | Strong | Utility BodyWorn |
+| `00:16:ed` | Bodycam | Strong | Utility BodyWorn |
+| `00:1d:96` | Bodycam | Strong | WatchGuard Video |
+| `fc:01:9e` | Bodycam | Strong | VIEVU |
+| `48:46:8d` | Bodycam | Strong | Zepcam |
+| `00:1b:be` | Bodycam | Strong | ICOP Digital |
+| `00:1c:3f` | Bodycam | Strong | Intl Police Tech |
+| `38:43:69` | Vehicle | Strong | Patrol upfit (PPC) |
+| `6c:18:11` | Vehicle | Likely | Decatur radar |
 | `00:30:44` | Accessory | Strong | Cradlepoint |
 | `00:e0:1c` | Accessory | Strong | Cradlepoint |
 | `00:14:3e` | Accessory | Strong | Sierra AirLink |
@@ -93,18 +105,16 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `64:ce:6e` | Accessory | Strong | Sierra AirLink |
 | `84:db:2f` | Accessory | Strong | Sierra AirLink |
 | `cc:93:4a` | Accessory | Strong | Sierra AirLink |
-| `00:09:bc` | Accessory | Strong | Utility Inc |
-| `00:16:ed` | Accessory | Strong | Utility Inc |
 | `28:80:a2` | Accessory | Weak | Inseego (MiFi?) |
 | `00:40:29` | Accessory | Weak | Compex (shared board?) |
 | `00:80:48` | Accessory | Weak | Compex (shared board?) |
 | `04:f0:21` | Accessory | Weak | Compex (shared board?) |
-| `04:0d:84` | Accessory | Weak | FS battery? |
-| `1c:34:f1` | Accessory | Weak | FS battery? |
-| `38:5b:44` | Accessory | Weak | FS battery? |
-| `94:34:69` | Accessory | Weak | FS battery? |
-| `b4:e3:f9` | Accessory | Weak | FS battery? |
-| `f0:82:c0` | Accessory | Weak | FS battery? |
+| `04:0d:84` | Alpr | Weak | SiLabs (ALPR?) |
+| `1c:34:f1` | Alpr | Weak | SiLabs (ALPR?) |
+| `38:5b:44` | Alpr | Weak | SiLabs (ALPR?) |
+| `94:34:69` | Alpr | Weak | SiLabs (ALPR?) |
+| `b4:e3:f9` | Alpr | Weak | SiLabs (ALPR?) |
+| `f0:82:c0` | Alpr | Weak | SiLabs (ALPR?) |
 | `48:62:64` | Camera | Strong | Arlo |
 | `a4:11:62` | Camera | Strong | Arlo |
 | `fc:9c:98` | Camera | Strong | Arlo |
@@ -142,12 +152,12 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `08:3a:88` | Alpr | Weak | USI (ALPR?) |
 | `e0:4f:43` | Alpr | Weak | USI (ALPR?) |
 | `48:27:ea` | Alpr | Weak | Samsung (ALPR?) |
-| `82:6b:f2` | Alpr | Weak |  |
-| `00:04:7d` | Alpr | Likely | Motorola Solutions |
-| `00:18:85` | Alpr | Likely | Motorola Solutions |
-| `00:1f:92` | Alpr | Likely | Motorola Solutions |
-| `4c:cc:34` | Alpr | Likely | Motorola Solutions |
-| `b8:e2:8c` | Alpr | Likely | Motorola Malaysia |
+| `82:6b:f2` | Alpr | Weak | LAA, not a vendor |
+| `00:04:7d` | Vehicle | Likely | Motorola Solutions |
+| `00:18:85` | Vehicle | Likely | Motorola Solutions |
+| `00:1f:92` | Vehicle | Likely | Motorola Solutions |
+| `4c:cc:34` | Vehicle | Likely | Motorola Solutions |
+| `b8:e2:8c` | Vehicle | Likely | Motorola Malaysia |
 | `00:bf:15` | Alpr | Likely | Genetec |
 | `0c:bf:15` | Alpr | Likely | Genetec |
 | `ac:9f:c3` | Camera | Strong | Ring |
@@ -202,11 +212,13 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 
 | Prefix | Len | Kind | Conf | Label |
 | --- | --- | --- | --- | --- |
-| `Flock Camera net` |  | Alpr | Strong | Flock camera SSID |
-| `Flock-` |  | Alpr | Strong | Flock SSID |
-| `Flock` |  | Alpr | Likely | Flock (bare) |
 | `Penguin-` |  | Accessory | Likely | Flock battery pack |
-| `O.MG` |  | Pentest | Likely | O.MG cable (default SSID) |
+| `FS Ext Battery` |  | Accessory | Strong | Flock ext battery |
+| `Ray-Ban` |  | Glasses | Strong | Ray-Ban Meta |
+| `Spectacles` |  | Glasses | Strong | Snap Spectacles |
+| `DfuTarg` |  | Accessory | Weak | Nordic DFU (generic) |
+| `QT ` | `11` | Vehicle | Likely | KARR BT module |
+| `DR ` | `11` | Vehicle | Likely | KARR Cell module |
 
 ## Names matched anywhere
 
@@ -247,9 +259,9 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `TrafficCast` |  | Alpr | Strong | TrafficCast |
 | `Miovision` |  | Alpr | Strong | Miovision |
 | `Pigvision` |  | Camera | Strong | Pigvision |
-| `ShotSpotter` |  | Alpr | Strong | ShotSpotter |
-| `Shot Spotter` |  | Alpr | Strong | ShotSpotter |
-| `SoundThinking` |  | Alpr | Strong | SoundThinking |
+| `ShotSpotter` |  | Acoustic | Strong | ShotSpotter |
+| `Shot Spotter` |  | Acoustic | Strong | ShotSpotter |
+| `SoundThinking` |  | Acoustic | Strong | SoundThinking |
 | `LVT-` |  | Alpr | Strong | LVT trailer |
 | `LVT_` |  | Alpr | Strong | LVT trailer |
 | `LiveView` |  | Alpr | Likely | LVT trailer? |
@@ -291,7 +303,7 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `i-PRO` |  | Camera | Likely | Panasonic i-PRO |
 | `Wolfcom` |  | Bodycam | Likely | Wolfcom |
 | `WatchGuard` |  | Bodycam | Likely | WatchGuard Video |
-| `Reveal` | 8 | Bodycam | Weak | Reveal Media? |
+| `Reveal` | `8` | Bodycam | Weak | Reveal Media? |
 
 ## BLE company and service IDs
 
@@ -306,13 +318,13 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `0x070A` |  | Vehicle | Strong | Huf tyre/PEPS |
 | `0x0127` |  | Vehicle | Strong | FOBO TPMS |
 | `0x0BA2` |  | Vehicle | Strong | TireCheck TPMS |
-|  | 0x00EE | Vehicle | Likely | FOBO TPMS |
-|  | 0x27A5 | Vehicle | Likely | SYTPMS sensor |
-|  | 0xFBB0 | Vehicle | Likely | Aftermarket TPMS |
-|  | 0x1860 | Vehicle | Weak | TPMS service |
+|  | `0x00EE` | Vehicle | Likely | FOBO TPMS |
+|  | `0x27A5` | Vehicle | Likely | SYTPMS sensor |
+|  | `0xFBB0` | Vehicle | Likely | Aftermarket TPMS |
+|  | `0x1860` | Vehicle | Weak | TPMS service |
 | `0x022B` |  | Vehicle | Weak | Tesla |
-|  | 0xFE96 | Vehicle | Weak | Tesla |
-|  | 0xFE97 | Vehicle | Weak | Tesla |
+|  | `0xFE96` | Vehicle | Weak | Tesla |
+|  | `0xFE97` | Vehicle | Weak | Tesla |
 | `0x05EB` |  | Vehicle | Weak | BMW |
 | `0x0723` |  | Vehicle | Weak | Ford/Lincoln |
 | `0x0977` |  | Vehicle | Weak | Toyota/Lexus |
@@ -321,8 +333,8 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `0x0BA6` |  | Vehicle | Weak | Nissan/Infiniti |
 | `0x0A10` |  | Vehicle | Weak | Subaru |
 | `0x011F` |  | Vehicle | Weak | Volkswagen |
-|  | 0xFE30 | Vehicle | Weak | Volkswagen |
-|  | 0xFE31 | Vehicle | Weak | Volkswagen |
+|  | `0xFE30` | Vehicle | Weak | Volkswagen |
+|  | `0xFE31` | Vehicle | Weak | Volkswagen |
 | `0x010E` |  | Vehicle | Weak | Audi |
 | `0x0120` |  | Vehicle | Weak | Porsche |
 | `0x017C` |  | Vehicle | Weak | Mercedes |
@@ -331,21 +343,21 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 | `0x0941` |  | Vehicle | Weak | Rivian |
 | `0x0C34` |  | Vehicle | Weak | BYD |
 | `0x09C8` |  | Accessory | Likely | Penguin battery |
-| `0x0D53` | 0xFD5F | Glasses | Strong | Meta Ray-Ban |
+| `0x0D53` | `0xFD5F` | Glasses | Strong | Meta Ray-Ban |
 | `0x0D53` |  | Glasses | Likely | Luxottica eyewear |
-|  | 0xFD5F | Glasses | Likely | Meta device |
+|  | `0xFD5F` | Glasses | Likely | Meta device |
 | `0x09C8` |  | Accessory | Likely | XUNTONG (Penguin) |
-|  | 0xFEED | Tracker | Strong | Tile |
-|  | 0xFEEC | Tracker | Strong | Tile |
-|  | 0xFD5A | Tracker | Likely | Samsung (SmartTag?) |
-|  | 0xFEAA | Tracker | Weak | Eddystone beacon |
-|  | 0x3080 | Pentest | Likely | Flipper Zero |
-|  | 0x3081 | Pentest | Likely | Flipper Zero (black) |
-|  | 0x3082 | Pentest | Likely | Flipper Zero (white) |
-|  | 0x3083 | Pentest | Likely | Flipper Zero (clear) |
-|  | 0x3100 | Alpr | Weak | Raven GATT 3100 |
-|  | 0x3101 | Alpr | Weak | Raven GATT 3101 |
-|  | 0x3102 | Alpr | Weak | Raven GATT 3102 |
+|  | `0xFEED` | Tracker | Strong | Tile |
+|  | `0xFEEC` | Tracker | Strong | Tile |
+|  | `0xFD5A` | Tracker | Likely | Samsung (SmartTag?) |
+|  | `0xFEAA` | Tracker | Weak | Eddystone beacon |
+|  | `0x3080` | Pentest | Likely | Flipper Zero |
+|  | `0x3081` | Pentest | Likely | Flipper Zero (black) |
+|  | `0x3082` | Pentest | Likely | Flipper Zero (white) |
+|  | `0x3083` | Pentest | Likely | Flipper Zero (clear) |
+|  | `0x3100` | Acoustic | Weak | Raven GATT 3100 |
+|  | `0x3101` | Acoustic | Weak | Raven GATT 3101 |
+|  | `0x3102` | Acoustic | Weak | Raven GATT 3102 |
 
 ## BLE advertised names
 
@@ -376,11 +388,11 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 
 | Company | Prefix | Kind | Conf | Label |
 | --- | --- | --- | --- | --- |
-| `0x0001` | 80 | Vehicle | Likely | TPMS (front L) |
-| `0x0001` | 81 | Vehicle | Likely | TPMS (front R) |
-| `0x0001` | 82 | Vehicle | Likely | TPMS (rear L) |
-| `0x0001` | 83 | Vehicle | Likely | TPMS (rear R) |
-| `0x004C` | 12 | Tracker | Likely | Apple Find My (separated) |
+| `0x0001` | `80` | Vehicle | Likely | TPMS (front L) |
+| `0x0001` | `81` | Vehicle | Likely | TPMS (front R) |
+| `0x0001` | `82` | Vehicle | Likely | TPMS (rear L) |
+| `0x0001` | `83` | Vehicle | Likely | TPMS (rear R) |
+| `0x004C` | `12` | Tracker | Likely | Apple Find My (separated) |
 
 ## BLE service data
 
@@ -388,8 +400,8 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 
 | Service | Prefix | Kind | Conf | Label |
 | --- | --- | --- | --- | --- |
-| `0xFEAA` | 40 | Tracker | Strong | Google Find My Device |
-| `0xFEAA` | 41 | Tracker | Strong | Google Find My Device |
+| `0xFEAA` | `40` | Tracker | Strong | Google Find My Device |
+| `0xFEAA` | `41` | Tracker | Strong | Google Find My Device |
 | `0xFCB2` |  | Tracker | Strong | DULT tracker |
 
 ## Corrections

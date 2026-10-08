@@ -7,14 +7,25 @@ kOuiSigs,OUI,00:17:1a,,Vehicle,Strong,Winegard RV
 kOuiSigs,OUI,cc:57:63,,Vehicle,Weak,CarPlay dongle?
 kOuiSigs,OUI,68:8f:c9,,Vehicle,Weak,CarPlay dongle?
 kOuiSigs,OUI,00:0e:a5,,Alpr,Strong,BLIP Systems
+kOuiSigs,OUI,00:18:29,,Alpr,Strong,Gatsometer
+kOuiSigs,OUI,00:30:7e,,Alpr,Strong,Redflex
 kOuiSigs,OUI,00:14:7b,,Alpr,Strong,Iteris (BlueTOAD)
-kOuiSigs,OUI,d4:11:d6,,Alpr,Strong,ShotSpotter
+kOuiSigs,OUI,d4:11:d6,,Acoustic,Strong,ShotSpotter
 kOuiSigs,OUI,14:ba:88,,Camera,Strong,Uniview
 kOuiSigs,OUI,48:ea:63,,Camera,Strong,Uniview
 kOuiSigs,OUI,6c:f1:7e,,Camera,Strong,Uniview
 kOuiSigs,OUI,88:26:3f,,Camera,Strong,Uniview
 kOuiSigs,OUI,c4:79:05,,Camera,Strong,Uniview
 kOuiSigs,OUI,00:23:bd,,Bodycam,Strong,Digital Ally
+kOuiSigs,OUI,00:09:bc,,Bodycam,Strong,Utility BodyWorn
+kOuiSigs,OUI,00:16:ed,,Bodycam,Strong,Utility BodyWorn
+kOuiSigs,OUI,00:1d:96,,Bodycam,Strong,WatchGuard Video
+kOuiSigs,OUI,fc:01:9e,,Bodycam,Strong,VIEVU
+kOuiSigs,OUI,48:46:8d,,Bodycam,Strong,Zepcam
+kOuiSigs,OUI,00:1b:be,,Bodycam,Strong,ICOP Digital
+kOuiSigs,OUI,00:1c:3f,,Bodycam,Strong,Intl Police Tech
+kOuiSigs,OUI,38:43:69,,Vehicle,Strong,Patrol upfit (PPC)
+kOuiSigs,OUI,6c:18:11,,Vehicle,Likely,Decatur radar
 kOuiSigs,OUI,00:30:44,,Accessory,Strong,Cradlepoint
 kOuiSigs,OUI,00:e0:1c,,Accessory,Strong,Cradlepoint
 kOuiSigs,OUI,00:14:3e,,Accessory,Strong,Sierra AirLink
@@ -24,18 +35,16 @@ kOuiSigs,OUI,50:13:9d,,Accessory,Strong,Sierra AirLink
 kOuiSigs,OUI,64:ce:6e,,Accessory,Strong,Sierra AirLink
 kOuiSigs,OUI,84:db:2f,,Accessory,Strong,Sierra AirLink
 kOuiSigs,OUI,cc:93:4a,,Accessory,Strong,Sierra AirLink
-kOuiSigs,OUI,00:09:bc,,Accessory,Strong,Utility Inc
-kOuiSigs,OUI,00:16:ed,,Accessory,Strong,Utility Inc
 kOuiSigs,OUI,28:80:a2,,Accessory,Weak,Inseego (MiFi?)
 kOuiSigs,OUI,00:40:29,,Accessory,Weak,Compex (shared board?)
 kOuiSigs,OUI,00:80:48,,Accessory,Weak,Compex (shared board?)
 kOuiSigs,OUI,04:f0:21,,Accessory,Weak,Compex (shared board?)
-kOuiSigs,OUI,04:0d:84,,Accessory,Weak,FS battery?
-kOuiSigs,OUI,1c:34:f1,,Accessory,Weak,FS battery?
-kOuiSigs,OUI,38:5b:44,,Accessory,Weak,FS battery?
-kOuiSigs,OUI,94:34:69,,Accessory,Weak,FS battery?
-kOuiSigs,OUI,b4:e3:f9,,Accessory,Weak,FS battery?
-kOuiSigs,OUI,f0:82:c0,,Accessory,Weak,FS battery?
+kOuiSigs,OUI,04:0d:84,,Alpr,Weak,SiLabs (ALPR?)
+kOuiSigs,OUI,1c:34:f1,,Alpr,Weak,SiLabs (ALPR?)
+kOuiSigs,OUI,38:5b:44,,Alpr,Weak,SiLabs (ALPR?)
+kOuiSigs,OUI,94:34:69,,Alpr,Weak,SiLabs (ALPR?)
+kOuiSigs,OUI,b4:e3:f9,,Alpr,Weak,SiLabs (ALPR?)
+kOuiSigs,OUI,f0:82:c0,,Alpr,Weak,SiLabs (ALPR?)
 kOuiSigs,OUI,48:62:64,,Camera,Strong,Arlo
 kOuiSigs,OUI,a4:11:62,,Camera,Strong,Arlo
 kOuiSigs,OUI,fc:9c:98,,Camera,Strong,Arlo
@@ -73,12 +82,12 @@ kOuiSigs,OUI,a4:cf:12,,Alpr,Weak,Espressif (ALPR?)
 kOuiSigs,OUI,08:3a:88,,Alpr,Weak,USI (ALPR?)
 kOuiSigs,OUI,e0:4f:43,,Alpr,Weak,USI (ALPR?)
 kOuiSigs,OUI,48:27:ea,,Alpr,Weak,Samsung (ALPR?)
-kOuiSigs,OUI,82:6b:f2,,Alpr,Weak,
-kOuiSigs,OUI,00:04:7d,,Alpr,Likely,Motorola Solutions
-kOuiSigs,OUI,00:18:85,,Alpr,Likely,Motorola Solutions
-kOuiSigs,OUI,00:1f:92,,Alpr,Likely,Motorola Solutions
-kOuiSigs,OUI,4c:cc:34,,Alpr,Likely,Motorola Solutions
-kOuiSigs,OUI,b8:e2:8c,,Alpr,Likely,Motorola Malaysia
+kOuiSigs,OUI,82:6b:f2,,Alpr,Weak,"LAA, not a vendor"
+kOuiSigs,OUI,00:04:7d,,Vehicle,Likely,Motorola Solutions
+kOuiSigs,OUI,00:18:85,,Vehicle,Likely,Motorola Solutions
+kOuiSigs,OUI,00:1f:92,,Vehicle,Likely,Motorola Solutions
+kOuiSigs,OUI,4c:cc:34,,Vehicle,Likely,Motorola Solutions
+kOuiSigs,OUI,b8:e2:8c,,Vehicle,Likely,Motorola Malaysia
 kOuiSigs,OUI,00:bf:15,,Alpr,Likely,Genetec
 kOuiSigs,OUI,0c:bf:15,,Alpr,Likely,Genetec
 kOuiSigs,OUI,ac:9f:c3,,Camera,Strong,Ring
@@ -164,9 +173,9 @@ kNameInSigs,Needle,Vantage Velocity,,Alpr,Strong,Iteris Vantage
 kNameInSigs,Needle,TrafficCast,,Alpr,Strong,TrafficCast
 kNameInSigs,Needle,Miovision,,Alpr,Strong,Miovision
 kNameInSigs,Needle,Pigvision,,Camera,Strong,Pigvision
-kNameInSigs,Needle,ShotSpotter,,Alpr,Strong,ShotSpotter
-kNameInSigs,Needle,Shot Spotter,,Alpr,Strong,ShotSpotter
-kNameInSigs,Needle,SoundThinking,,Alpr,Strong,SoundThinking
+kNameInSigs,Needle,ShotSpotter,,Acoustic,Strong,ShotSpotter
+kNameInSigs,Needle,Shot Spotter,,Acoustic,Strong,ShotSpotter
+kNameInSigs,Needle,SoundThinking,,Acoustic,Strong,SoundThinking
 kNameInSigs,Needle,LVT-,,Alpr,Strong,LVT trailer
 kNameInSigs,Needle,LVT_,,Alpr,Strong,LVT trailer
 kNameInSigs,Needle,LiveView,,Alpr,Likely,LVT trailer?
@@ -253,9 +262,9 @@ kBleSigs,Company,,0x3080,Pentest,Likely,Flipper Zero
 kBleSigs,Company,,0x3081,Pentest,Likely,Flipper Zero (black)
 kBleSigs,Company,,0x3082,Pentest,Likely,Flipper Zero (white)
 kBleSigs,Company,,0x3083,Pentest,Likely,Flipper Zero (clear)
-kBleSigs,Company,,0x3100,Alpr,Weak,Raven GATT 3100
-kBleSigs,Company,,0x3101,Alpr,Weak,Raven GATT 3101
-kBleSigs,Company,,0x3102,Alpr,Weak,Raven GATT 3102
+kBleSigs,Company,,0x3100,Acoustic,Weak,Raven GATT 3100
+kBleSigs,Company,,0x3101,Acoustic,Weak,Raven GATT 3101
+kBleSigs,Company,,0x3102,Acoustic,Weak,Raven GATT 3102
 kBleNameSigs,Prefix,Penguin-,,Accessory,Likely,Flock battery pack
 kBleNameSigs,Prefix,FS Ext Battery,,Accessory,Strong,Flock ext battery
 kBleNameSigs,Prefix,Ray-Ban,,Glasses,Strong,Ray-Ban Meta

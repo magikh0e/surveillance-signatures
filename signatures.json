@@ -1,9 +1,9 @@
 {
   "name": "surveillance-signatures",
-  "snapshot": "2026-10-06",
+  "snapshot": "2026-10-07",
   "licence": "GPL-3.0-or-later",
   "extracted_from": "https://github.com/magikh0e/pueo",
-  "total": 274,
+  "total": 283,
   "kinds": {
     "Alpr": "Automatic number plate reader",
     "Bodycam": "Body-worn camera",
@@ -13,7 +13,8 @@
     "Tracker": "Item tracker",
     "Accessory": "Accessory or wearable",
     "Pentest": "Pentest hardware",
-    "Mesh": "Mesh radio node"
+    "Mesh": "Mesh radio node",
+    "Acoustic": "Gunshot detection sensor"
   },
   "tables": [
     {
@@ -89,6 +90,18 @@
           "Label": "BLIP Systems"
         },
         {
+          "OUI": "00:18:29",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Gatsometer"
+        },
+        {
+          "OUI": "00:30:7e",
+          "Kind": "Alpr",
+          "Conf": "Strong",
+          "Label": "Redflex"
+        },
+        {
           "OUI": "00:14:7b",
           "Kind": "Alpr",
           "Conf": "Strong",
@@ -96,7 +109,7 @@
         },
         {
           "OUI": "d4:11:d6",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Strong",
           "Label": "ShotSpotter"
         },
@@ -135,6 +148,60 @@
           "Kind": "Bodycam",
           "Conf": "Strong",
           "Label": "Digital Ally"
+        },
+        {
+          "OUI": "00:09:bc",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Utility BodyWorn"
+        },
+        {
+          "OUI": "00:16:ed",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Utility BodyWorn"
+        },
+        {
+          "OUI": "00:1d:96",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "WatchGuard Video"
+        },
+        {
+          "OUI": "fc:01:9e",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "VIEVU"
+        },
+        {
+          "OUI": "48:46:8d",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Zepcam"
+        },
+        {
+          "OUI": "00:1b:be",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "ICOP Digital"
+        },
+        {
+          "OUI": "00:1c:3f",
+          "Kind": "Bodycam",
+          "Conf": "Strong",
+          "Label": "Intl Police Tech"
+        },
+        {
+          "OUI": "38:43:69",
+          "Kind": "Vehicle",
+          "Conf": "Strong",
+          "Label": "Patrol upfit (PPC)"
+        },
+        {
+          "OUI": "6c:18:11",
+          "Kind": "Vehicle",
+          "Conf": "Likely",
+          "Label": "Decatur radar"
         },
         {
           "OUI": "00:30:44",
@@ -191,18 +258,6 @@
           "Label": "Sierra AirLink"
         },
         {
-          "OUI": "00:09:bc",
-          "Kind": "Accessory",
-          "Conf": "Strong",
-          "Label": "Utility Inc"
-        },
-        {
-          "OUI": "00:16:ed",
-          "Kind": "Accessory",
-          "Conf": "Strong",
-          "Label": "Utility Inc"
-        },
-        {
           "OUI": "28:80:a2",
           "Kind": "Accessory",
           "Conf": "Weak",
@@ -228,39 +283,39 @@
         },
         {
           "OUI": "04:0d:84",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "1c:34:f1",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "38:5b:44",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "94:34:69",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "b4:e3:f9",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "f0:82:c0",
-          "Kind": "Accessory",
+          "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": "FS battery?"
+          "Label": "SiLabs (ALPR?)"
         },
         {
           "OUI": "48:62:64",
@@ -488,35 +543,35 @@
           "OUI": "82:6b:f2",
           "Kind": "Alpr",
           "Conf": "Weak",
-          "Label": ""
+          "Label": "LAA, not a vendor"
         },
         {
           "OUI": "00:04:7d",
-          "Kind": "Alpr",
+          "Kind": "Vehicle",
           "Conf": "Likely",
           "Label": "Motorola Solutions"
         },
         {
           "OUI": "00:18:85",
-          "Kind": "Alpr",
+          "Kind": "Vehicle",
           "Conf": "Likely",
           "Label": "Motorola Solutions"
         },
         {
           "OUI": "00:1f:92",
-          "Kind": "Alpr",
+          "Kind": "Vehicle",
           "Conf": "Likely",
           "Label": "Motorola Solutions"
         },
         {
           "OUI": "4c:cc:34",
-          "Kind": "Alpr",
+          "Kind": "Vehicle",
           "Conf": "Likely",
           "Label": "Motorola Solutions"
         },
         {
           "OUI": "b8:e2:8c",
-          "Kind": "Alpr",
+          "Kind": "Vehicle",
           "Conf": "Likely",
           "Label": "Motorola Malaysia"
         },
@@ -1099,21 +1154,21 @@
         {
           "Needle": "ShotSpotter",
           "Min": "",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Strong",
           "Label": "ShotSpotter"
         },
         {
           "Needle": "Shot Spotter",
           "Min": "",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Strong",
           "Label": "ShotSpotter"
         },
         {
           "Needle": "SoundThinking",
           "Min": "",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Strong",
           "Label": "SoundThinking"
         },
@@ -1736,21 +1791,21 @@
         {
           "Company": "",
           "Service": "0x3100",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Weak",
           "Label": "Raven GATT 3100"
         },
         {
           "Company": "",
           "Service": "0x3101",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Weak",
           "Label": "Raven GATT 3101"
         },
         {
           "Company": "",
           "Service": "0x3102",
-          "Kind": "Alpr",
+          "Kind": "Acoustic",
           "Conf": "Weak",
           "Label": "Raven GATT 3102"
         }
