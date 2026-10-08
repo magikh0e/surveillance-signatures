@@ -7,7 +7,7 @@
 
 # Surveillance signatures
 
-Identifiers that surveillance hardware broadcasts: **283 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, pentest hardware and mesh nodes.
+Identifiers that surveillance hardware broadcasts: **283 rows over nine tables**, each graded. Automatic number plate readers, fixed and body-worn cameras, smart glasses, item trackers, vehicle and fleet modules, gunshot sensors, pentest hardware and mesh nodes.
 
 Everything here is a thing a device announces to anyone in range, over WiFi or Bluetooth Low Energy, without being asked. Nothing in this list requires connecting to anything, and nothing in it describes an attack.
 
