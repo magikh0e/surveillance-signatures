@@ -1,7 +1,8 @@
 <p align="center">
-  <img src="assets/logo-512.png" width="160" height="160"
-       alt="A fingerprint whose ridges are broken into short dashes, the
-            outer two trailing off to the right like a radio emission.">
+  <img src="assets/logo-512.png" width="220" height="220"
+       alt="A badge: a neon tiki-skull wireframe flanked by broadcast waves
+            and crosshairs, ringed by surveillance cameras and binary, under
+            the words Surveillance Signatures.">
 </p>
 
 # Surveillance signatures
@@ -23,7 +24,7 @@ Snapshot of 2026-10-07. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magik
 | `CONTRIBUTING.md` | what to send, what evidence settles it, what is out of scope |
 | `signatures.csv` | one row per signature, flat |
 | `signatures.json` | the same, grouped by table |
-| `assets/` | the mark, flat on its ground and again transparent |
+| `assets/` | the badge logo, and the social-preview card |
 
 ## What a match means, and what it does not
 
@@ -409,6 +410,14 @@ That is the summary. **[GRADING.md](GRADING.md)** has the rest: the exact corrob
 A wrong row is worth more to fix than a missing one, because a wrong row names somebody. If a signature here is misattributed, or one you can evidence is missing, open an issue. Evidence beats a vendor name: a capture, a datasheet, a registry entry.
 
 **[CONTRIBUTING.md](CONTRIBUTING.md)** has the rest, and one thing worth knowing before you start: the three data files are generated, so a pull request editing them is overwritten by the next regeneration. Signatures go in as issues. Everything that is not generated takes a pull request as normal.
+
+A question, or something seen in the field you can't place, goes in [Discussions](https://github.com/magikh0e/surveillance-signatures/discussions) rather than an issue — Q&A and Show and tell are open. An issue is for a row that is wrong or a row that is missing, with evidence.
+
+## Support
+
+This list is built and maintained in my own time, from public broadcasts and open sources, with nothing to sell. If it is useful to you, a coffee is always appreciated and helps keep it going.
+
+<a href="https://buymeacoffee.com/magikh0e"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=%F0%9F%8D%BA&slug=magikh0e&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a beer" height="42"></a>
 
 ## Licence
 
