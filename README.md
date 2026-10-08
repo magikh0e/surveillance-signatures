@@ -398,6 +398,14 @@ A wrong row is worth more to fix than a missing one, because a wrong row names s
 
 **[CONTRIBUTING.md](CONTRIBUTING.md)** has the rest, and one thing worth knowing before you start: the three data files are generated, so a pull request editing them is overwritten by the next regeneration. Signatures go in as issues. Everything that is not generated takes a pull request as normal.
 
+A question, or something seen in the field you can't place, goes in [Discussions](https://github.com/magikh0e/surveillance-signatures/discussions) rather than an issue — Q&A and Show and tell are open. An issue is for a row that is wrong or a row that is missing, with evidence.
+
+## Support
+
+This list is built and maintained in my own time, from public broadcasts and open sources, with nothing to sell. If it is useful to you, a coffee is always appreciated and helps keep it going.
+
+<a href="https://buymeacoffee.com/magikh0e"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=%F0%9F%8D%BA&slug=magikh0e&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a beer" height="42"></a>
+
 ## Licence
 
 GPL-3.0-or-later. See `LICENSE`.
