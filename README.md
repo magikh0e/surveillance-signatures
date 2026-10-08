@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-512.png" width="160" height="160"
+  <img src="assets/logo-512.png" width="220" height="220"
        alt="A badge: a neon tiki-skull wireframe flanked by broadcast waves
             and crosshairs, ringed by surveillance cameras and binary, under
             the words Surveillance Signatures.">
@@ -24,7 +24,7 @@ Snapshot of 2026-10-06. Extracted from `ESP32-DIV/SpotterSignatures.h` in [magik
 | `CONTRIBUTING.md` | what to send, what evidence settles it, what is out of scope |
 | `signatures.csv` | one row per signature, flat |
 | `signatures.json` | the same, grouped by table |
-| `assets/` | the mark, flat on its ground and again transparent |
+| `assets/` | the badge logo, and the social-preview card |
 
 ## What a match means, and what it does not
 
