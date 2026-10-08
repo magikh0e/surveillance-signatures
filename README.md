@@ -1,7 +1,8 @@
 <p align="center">
   <img src="assets/logo-512.png" width="160" height="160"
-       alt="A fingerprint whose ridges are broken into short dashes, the
-            outer two trailing off to the right like a radio emission.">
+       alt="A badge: a neon tiki-skull wireframe flanked by broadcast waves
+            and crosshairs, ringed by surveillance cameras and binary, under
+            the words Surveillance Signatures.">
 </p>
 
 # Surveillance signatures
