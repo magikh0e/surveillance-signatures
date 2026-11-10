@@ -1,8 +1,9 @@
 <p align="center">
   <img src="assets/logo-512.png" width="220" height="220"
-       alt="A badge: a neon tiki-skull wireframe flanked by broadcast waves
-            and crosshairs, ringed by surveillance cameras and binary, under
-            the words Surveillance Signatures.">
+       alt="A badge: a glowing green fingerprint whose ridges are WiFi and
+            Bluetooth arcs, with a camera at its core, on a radar screen
+            ringed by detected devices, in a riveted metal frame under the
+            words Surveillance Signatures.">
 </p>
 
 # Surveillance signatures
